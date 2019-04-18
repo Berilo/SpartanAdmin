@@ -1841,7 +1841,7 @@ background-color:#3b4452
     padding-right: 0;
     padding-left: 0
 }
-.form-control-sm {
+.form-control-sm{
     height: calc(1.5em + .5rem + 2px);
     padding: .28rem .8rem;
     font-size: .875rem;

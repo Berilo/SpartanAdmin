@@ -4084,3 +4084,29 @@ non_active {
 
 
 
+
+.language_indicator {
+	width: 30px;
+	text-align: right;
+	float: right;
+	position: relative;
+	margin: -30px 16px;
+}
+
+.google_button {
+	position: absolute;
+  left: 10%;
+	right: 10%;
+	bottom: 20%;
+ 
+}
+
+.add_sku {
+	width: 40%;
+	padding: 24px;
+}
+
+.add-package-form {
+	width: 60%;
+	padding: 24px;
+}
