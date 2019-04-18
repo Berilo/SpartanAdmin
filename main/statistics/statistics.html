@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8" />
+<title>Adminto - Responsive Admin Dashboard Template</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta content="A fully featured admin theme which can be used to build CRM, CMS, etc." name="description" />
+<meta content="Coderthemes" name="author" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+<!-- App favicon -->
+<link rel="shortcut icon" href="../assets/images/favicon.ico">
+
+<!--Morris Chart-->
+<link rel="stylesheet" href="../assets/libs/morris-js/morris.css" />
+
+<!-- App css -->
+<link href="../assets/css/bootstrap.min.css" rel="stylesheet" type="text/css" />
+<link href="../assets/css/icons.min.css" rel="stylesheet" type="text/css" />
+<link href="../assets/css/app.min.css" rel="stylesheet" type="text/css" />
+</head>
+<script>
+function includeHTML() {
+  var z, i, elmnt, file, xhttp;
+  /*loop through a collection of all HTML elements:*/
+  z = document.getElementsByTagName("*");
+  for (i = 0; i < z.length; i++) {
+    elmnt = z[i];
+    /*search for elements with a certain atrribute:*/
+    file = elmnt.getAttribute("w3-include-html");
+    if (file) {
+      /*make an HTTP request using the attribute value as the file name:*/
+      xhttp = new XMLHttpRequest();
+      xhttp.onreadystatechange = function() {
+        if (this.readyState == 4) {
+          if (this.status == 200) {elmnt.innerHTML = this.responseText;}
+          if (this.status == 404) {elmnt.innerHTML = "Page not found.";}
+          /*remove the attribute, and call this function once more:*/
+          elmnt.removeAttribute("w3-include-html");
+          includeHTML();
+        }
+      }      
+      xhttp.open("GET", file, true);
+      xhttp.send();
+      /*exit the function:*/
+      return;
+    }
+  }
+};
+</script>
+
+<body>
+<div w3-include-html="../navigation/navigation.html"></div>
+<div id="content"></div>
+<script>
+includeHTML();
+</script> 
+	
+<script src="../assets/js/vendor.min.js"></script> 
+
+<!-- Plugins Js --> 
+<script src="../assets/libs/bootstrap-tagsinput/bootstrap-tagsinput.min.js"></script> 
+<script src="../assets/libs/switchery/switchery.min.js"></script> 
+<script src="../assets/libs/multiselect/jquery.multi-select.js"></script> 
+<script src="../assets/libs/jquery-quicksearch/jquery.quicksearch.min.js"></script> 
+<script src="../assets/libs/select2/select2.min.js"></script> 
+<script src="../assets/libs/bootstrap-touchspin/jquery.bootstrap-touchspin.min.js"></script> 
+<script src="../assets/libs/jquery-mask-plugin/jquery.mask.min.js"></script> 
+<script src="../assets/libs/moment/moment.js"></script> 
+<script src="../assets/libs/bootstrap-timepicker/bootstrap-timepicker.min.js"></script> 
+<script src="../assets/libs/bootstrap-colorpicker/bootstrap-colorpicker.min.js"></script> 
+<script src="../assets/libs/bootstrap-datepicker/bootstrap-datepicker.min.js"></script> 
+<script src="../assets/libs/bootstrap-daterangepicker/daterangepicker.js"></script> 
+<script src="../assets/libs/bootstrap-maxlength/bootstrap-maxlength.min.js"></script> 
+
+<!-- Init js--> 
+<script src="../assets/js/pages/form-advanced.init.js"></script> 
+
+<!-- App js --> 
+<script src="../assets/js/app.min.js"></script>
+</body>
+</html>
