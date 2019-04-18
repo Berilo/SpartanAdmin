@@ -12,18 +12,29 @@
 
 <!-- dropify -->
 <link href="assets/libs/dropify/dropify.min.css" rel="stylesheet" type="text/css" />
+	
 
 <!-- App css -->
 <link href="assets/css/bootstrap.min.css" rel="stylesheet" type="text/css" />
 <link href="assets/css/icons.min.css" rel="stylesheet" type="text/css" />
 <link href="assets/css/app.min.css" rel="stylesheet" type="text/css" />
+<link href="assets/css/app.css" rel="stylesheet" type="text/css" />
 </head>
 
 <body>
-<input type="file" class="dropify" data-height="300" />
+	<div class="Input_active">
+	<div class="Input_field_text">
+  <h4 class="Input_field_text">Upload Image</h4>
+	<p class="Input_field_text paragraph_style">Required size for image is 1024x1024px. <br><br>Min. size: 512x512px<br>Max. size: 1024x1024px</p>
+		</div>
+  <div class="Input_field_size">
+    <input type="file" class="dropify" data-height="300" data-max-width="1025" data-min-width="511" data-max-height="1025" data-min-height="511"/>
 
 <!-- Right bar overlay-->
 <div class="rightbar-overlay"></div>
+  </div>
+</div>
+
 
 <!-- Vendor js --> 
 <script src="assets/js/vendor.min.js"></script> 

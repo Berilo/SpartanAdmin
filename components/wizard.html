@@ -2,7 +2,7 @@
 <html>
 <head>
 <meta charset="utf-8" />
-<title>Adminto - Responsive Admin Dashboard Template</title>
+<title>Input Packages</title>
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <meta content="A fully featured admin theme which can be used to build CRM, CMS, etc." name="description" />
 <meta content="Coderthemes" name="author" />
@@ -10,122 +10,164 @@
 <!-- App favicon -->
 <link rel="shortcut icon" href="assets/images/favicon.ico">
 
+<!-- Plugins css -->
+<link href="assets/libs/bootstrap-tagsinput/bootstrap-tagsinput.css" rel="stylesheet" />
+<link href="assets/libs/switchery/switchery.min.css" rel="stylesheet" type="text/css" />
+<link href="assets/libs/multiselect/multi-select.css"  rel="stylesheet" type="text/css" />
+<link href="assets/libs/select2/select2.min.css" rel="stylesheet" type="text/css" />
+<link href="assets/libs/bootstrap-touchspin/jquery.bootstrap-touchspin.min.css" rel="stylesheet" />
+<link href="assets/libs/switchery/switchery.min.css" rel="stylesheet" />
+<link href="assets/libs/bootstrap-timepicker/bootstrap-timepicker.min.css" rel="stylesheet">
+<link href="assets/libs/bootstrap-colorpicker/bootstrap-colorpicker.min.css" rel="stylesheet">
+<link href="assets/libs/bootstrap-datepicker/bootstrap-datepicker.css" rel="stylesheet">
+<link href="assets/libs/bootstrap-daterangepicker/daterangepicker.css" rel="stylesheet">
+<link href="assets/libs/dropify/dropify.min.css" rel="stylesheet" type="text/css" />
+
 <!-- App css -->
 <link href="assets/css/bootstrap.min.css" rel="stylesheet" type="text/css" />
 <link href="assets/css/icons.min.css" rel="stylesheet" type="text/css" />
 <link href="assets/css/app.min.css" rel="stylesheet" type="text/css" />
+<link href="assets/css/app.css" rel="stylesheet" type="text/css" />
 </head>
 
 <body>
-<div class="col-xl-6">
-<div class="card">
-  <div class="card-body">
-    <h4 class="header-title mb-3"> Basic Wizard</h4>
-    <form>
-      <div id="basicwizard">
-        <ul class="nav nav-pills bg-light nav-justified form-wizard-header mb-4">
-          <li class="nav-item"> <a href="#basictab1" data-toggle="tab" class="nav-link rounded-0 pt-2 pb-2"> <i class="mdi mdi-account-circle mr-1"></i> <span class="d-none d-sm-inline">Account</span> </a> </li>
-          <li class="nav-item"> <a href="#basictab2" data-toggle="tab" class="nav-link rounded-0 pt-2 pb-2"> <i class="mdi mdi-face-profile mr-1"></i> <span class="d-none d-sm-inline">Profile</span> </a> </li>
-          <li class="nav-item"> <a href="#basictab3" data-toggle="tab" class="nav-link rounded-0 pt-2 pb-2"> <i class="mdi mdi-checkbox-marked-circle-outline mr-1"></i> <span class="d-none d-sm-inline">Finish</span> </a> </li>
-        </ul>
-        <div class="tab-content border-0 mb-0">
-          <div class="tab-pane" id="basictab1">
-            <div class="row">
-              <div class="col-12">
-                <div class="form-group row mb-3">
-                  <label class="col-md-3 col-form-label" for="userName">User name</label>
-                  <div class="col-md-9">
-                    <input type="text" class="form-control" id="userName" name="userName" value="Coderthemes">
-                  </div>
-                </div>
-                <div class="form-group row mb-3">
-                  <label class="col-md-3 col-form-label" for="password"> Password</label>
-                  <div class="col-md-9">
-                    <input type="password" id="password" name="password" class="form-control" value="123456789">
-                  </div>
-                </div>
-                <div class="form-group row mb-3">
-                  <label class="col-md-3 col-form-label" for="confirm">Re Password</label>
-                  <div class="col-md-9">
-                    <input type="password" id="confirm" name="confirm" class="form-control" value="123456789">
-                  </div>
+<form>
+  <div id="basicwizard">
+    <ul class="nav nav-pills bg-light nav-justified form-wizard-header mb-4">
+      <li class="nav-item"> <a href="#basictab1" data-toggle="tab" class="nav-link rounded-0 pt-2 pb-2"> <i class="mdi mdi-account-circle mr-1"></i> <span class="d-none d-sm-inline">Section 1</span> </a> </li>
+      <li class="nav-item"> <a href="#basictab2" data-toggle="tab" class="nav-link rounded-0 pt-2 pb-2"> <i class="mdi mdi-face-profile mr-1"></i> <span class="d-none d-sm-inline">Section 2</span> </a> </li>
+    </ul>
+    <div class="tab-content border-0 mb-0">
+      <div class="tab-pane" id="basictab1">
+        <div class="row">
+          <div class="col-12">
+            <div class="form-group row mb-3">
+              <div class="Input_active">
+                <h4 class="Input_field_text">Title</h4>
+                <div class="Input_field_size">
+                  <input type="text" class="form-control" maxlength="25" name="Title" id="alloptions" />
                 </div>
               </div>
-              <!-- end col --> 
-            </div>
-            <!-- end row --> 
-          </div>
-          <div class="tab-pane" id="basictab2">
-            <div class="row">
-              <div class="col-12">
-                <div class="form-group row mb-3">
-                  <label class="col-md-3 col-form-label" for="name"> First name</label>
-                  <div class="col-md-9">
-                    <input type="text" id="name" name="name" class="form-control" value="Francis">
-                  </div>
-                </div>
-                <div class="form-group row mb-3">
-                  <label class="col-md-3 col-form-label" for="surname"> Last name</label>
-                  <div class="col-md-9">
-                    <input type="text" id="surname" name="surname" class="form-control" value="Brinkman">
-                  </div>
-                </div>
-                <div class="form-group row mb-3">
-                  <label class="col-md-3 col-form-label" for="email">Email</label>
-                  <div class="col-md-9">
-                    <input type="email" id="email" name="email" class="form-control" value="cory1979@hotmail.com">
-                  </div>
+              <div class="Input_active">
+                <h4 class="Input_field_text">Description</h4>
+                <div class="Input_field_size">
+                  <input type="text" class="form-control" maxlength="60" name="description" id="alloptions" />
                 </div>
               </div>
-              <!-- end col --> 
-            </div>
-            <!-- end row --> 
-          </div>
-          <div class="tab-pane" id="basictab3">
-            <div class="row">
-              <div class="col-12">
-                <div class="text-center">
-                  <h2 class="mt-0"><i class="mdi mdi-check-all"></i></h2>
-                  <h3 class="mt-0">Thank you !</h3>
-                  <p class="w-75 mb-2 mx-auto">Quisque nec turpis at urna dictum luctus. Suspendisse convallis dignissim eros at volutpat. In egestas mattis dui. Aliquam
-                    mattis dictum aliquet.</p>
-                  <div class="mb-3">
-                    <div class="custom-control custom-checkbox">
-                      <input type="checkbox" class="custom-control-input" id="customCheck1">
-                      <label class="custom-control-label" for="customCheck1">I agree with the Terms and Conditions</label>
-                    </div>
-                  </div>
+              <div class="Input_active">
+                <h4 class="Input_field_text">Tags</h4>
+                <div class="Input_field_size">
+                  <select class="select2-limiting form-control" multiple="multiple">
+                    <option value="AK">Alaska</option>
+                    <option value="HI">Hawaii</option>
+                    <option value="CA">California</option>
+                    <option value="NV">Nevada</option>
+                    <option value="OR">Oregon</option>
+                    <option value="WA">Washington</option>
+                    <option value="AZ">Arizona</option>
+                    <option value="CO">Colorado</option>
+                    <option value="ID">Idaho</option>
+                  </select>
                 </div>
               </div>
-              <!-- end col --> 
+              <div class="Input_active">
+                <div class="Input_field_text">
+                  <h4 class="Input_field_text">Upload Image</h4>
+                  <p class="Input_field_text paragraph_style">Required size for image is 1024x1024px. <br>
+                    <br>
+                    Min. size: 512x512px<br>
+                    Max. size: 1024x1024px</p>
+                </div>
+                <div class="Input_field_size">
+                  <input type="file" class="dropify" data-height="300" data-max-width="1025" data-min-width="511" data-max-height="1025" data-min-height="511"/>
+                  
+                  <!-- Right bar overlay-->
+                  <div class="rightbar-overlay"></div>
+                </div>
+              </div>
             </div>
-            <!-- end row --> 
           </div>
-          <ul class="list-inline wizard mb-0">
-            <li class="previous list-inline-item"> <a href="javascript: void(0);" class="btn btn-secondary">Previous</a> </li>
-            <li class="next list-inline-item float-right"> <a href="javascript: void(0);" class="btn btn-secondary">Next</a> </li>
-          </ul>
+          <!-- end col --> 
         </div>
-        <!-- tab-content --> 
+        <!-- end row --> 
       </div>
-      <!-- end #basicwizard-->
-    </form>
+      <div class="tab-pane" id="basictab2">
+        <div class="row">
+          <div class="col-12">
+            <div class="form-group row mb-3">
+              <select name="country" class="multi-select" multiple="" id="my_multi_select3">
+                <option value="AF">Afghanistan</option>
+                <option value="AL">Albania</option>
+                <option value="DZ">Algeria</option>
+                <option value="AS">American Samoa</option>
+                <option value="AD">Andorra</option>
+                <option value="AO">Angola</option>
+                <option value="AI">Anguilla</option>
+                <option value="AQ">Antarctica</option>
+                <option value="AR">Argentina</option>
+                <option value="AM">Armenia</option>
+                <option value="AW">Aruba</option>
+                <option value="AU">Australia</option>
+                <option value="AT">Austria</option>
+                <option value="AZ">Azerbaijan</option>
+                <option value="BS">Bahamas</option>
+                <option value="BH">Bahrain</option>
+                <option value="BD">Bangladesh</option>
+                <option value="BB">Barbados</option>
+                <option value="BY">Belarus</option>
+                <option value="BE">Belgium</option>
+                <option value="BZ">Belize</option>
+                <option value="BJ">Benin</option>
+                <option value="BM">Bermuda</option>
+                <option value="BT">Bhutan</option>
+                <option value="BO">Bolivia</option>
+              </select>
+            </div>
+          </div>
+        </div>
+        <!-- end col --> 
+      </div>
+      <!-- end row --> 
+    </div>
+    <ul class="list-inline wizard mb-0">
+      <li class="previous list-inline-item"> <a href="javascript: void(0);" class="btn btn-secondary">Previous</a> </li>
+      <li class="next list-inline-item float-right"> <a href="javascript: void(0);" class="btn btn-secondary">Next</a> </li>
+    </ul>
   </div>
-  <!-- end card-body --> 
-</div>
-<!-- end card--> 
+  <!-- tab-content --> 
+  
+  <!-- end #basicwizard-->
+</form>
 
+<!-- /Right-bar --> 
 <!-- Right bar overlay-->
 <div class="rightbar-overlay"></div>
 
 <!-- Vendor js --> 
 <script src="assets/js/vendor.min.js"></script> 
 
-<!-- Plugins js--> 
-<script src="assets/libs/twitter-bootstrap-wizard/jquery.bootstrap.wizard.min.js"></script> 
+<!-- Plugins Js --> 
+<script src="assets/libs/bootstrap-tagsinput/bootstrap-tagsinput.min.js"></script> 
+<script src="assets/libs/switchery/switchery.min.js"></script> 
+<script src="assets/libs/multiselect/jquery.multi-select.js"></script> 
+<script src="assets/libs/jquery-quicksearch/jquery.quicksearch.min.js"></script> 
+<script src="assets/libs/select2/select2.min.js"></script> 
+<script src="assets/libs/bootstrap-touchspin/jquery.bootstrap-touchspin.min.js"></script> 
+<script src="assets/libs/jquery-mask-plugin/jquery.mask.min.js"></script> 
+<script src="assets/libs/moment/moment.js"></script> 
+<script src="assets/libs/bootstrap-timepicker/bootstrap-timepicker.min.js"></script> 
+<script src="assets/libs/bootstrap-colorpicker/bootstrap-colorpicker.min.js"></script> 
+<script src="assets/libs/bootstrap-datepicker/bootstrap-datepicker.min.js"></script> 
+<script src="assets/libs/bootstrap-daterangepicker/daterangepicker.js"></script> 
+<script src="assets/libs/bootstrap-maxlength/bootstrap-maxlength.min.js"></script> 
 
 <!-- Init js--> 
-<script src="assets/js/pages/form-wizard.init.js"></script> 
+<script src="assets/js/pages/form-advanced.init.js"></script> 
+
+<!-- dropify js --> 
+<script src="assets/libs/dropify/dropify.min.js"></script> 
+<!-- form-upload init --> 
+<script src="assets/js/pages/form-fileupload.init.js"></script> 
 
 <!-- App js --> 
 <script src="assets/js/app.min.js"></script>
