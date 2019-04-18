@@ -4110,3 +4110,10 @@ non_active {
 	width: 60%;
 	padding: 24px;
 }
+
+.change-state {
+    width: 15%;
+	margin: 0px 200px;
+    position: absolute;
+    z-index: 1;
+}
